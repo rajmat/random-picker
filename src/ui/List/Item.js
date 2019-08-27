@@ -23,6 +23,9 @@ const Text = styled.p`
 
 const Cross = styled(Text)`
   color: ${colors.secondaryColor};
+  cursor: pointer;
+  padding: 0;
+  margin: 20px 30px;
 `;
 
 const Item = ({ children, onDelete }) => (
