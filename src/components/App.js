@@ -1,36 +1,31 @@
 import React, { useState } from "react";
 import Container from "../ui/Container";
-import { AppTitle, Form, TextInput, Item, List, SubmitButton } from "../ui";
+import { AppTitle, Item, UnorderedList } from "../ui";
+import { AddItemForm } from ".";
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
   const [list, setList] = useState([]);
+
+  const addItem = item => {
+    setList([item, ...list]);
+  };
+
+  const deleteItem = index => {
+    const filteredList = list.filter((item, i) => i !== index);
+    setList(filteredList);
+  };
 
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
-      <Form
-        onSubmit={event => {
-          event.preventDefault();
-          const value = inputValue.trim();
-          value.length && setList([value, ...list]);
-          setInputValue("");
-        }}>
-        <TextInput
-          type="text"
-          placeholder="Type something..."
-          value={inputValue}
-          onChange={event => setInputValue(event.target.value)}
-        />
-        <SubmitButton type="submit" value="Add" />
-      </Form>
-      <List>
+      <AddItemForm addItem={addItem} />
+      <UnorderedList>
         {list.map((listItem, i) => (
-          <Item key={i} onDelete={() => setList(list.filter(item => item !== listItem))}>
+          <Item key={i} onDelete={() => deleteItem(i)}>
             {listItem}
           </Item>
         ))}
-      </List>
+      </UnorderedList>
     </Container>
   );
 }

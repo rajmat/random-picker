@@ -1,4 +1,4 @@
+import AddItemForm from "./AddItemForm";
 import App from "./App";
-import Item from "./Item";
 
-export { App, Item };
+export { App, AddItemForm };
