@@ -21,11 +21,21 @@ const Text = styled.p`
   word-wrap: break-word;
 `;
 
-const Cross = styled(Text)`
+const Cross = styled.button`
   color: ${colors.secondaryColor};
-  cursor: pointer;
+  font-family: ${fonts.mainFont};
+  font-size: 30px;
+  line-height: 30px;
+  border: none;
+  background-color: transparent;
   padding: 0;
   margin: 20px 30px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: ${colors.primaryColor};
+    outline: none;
+  }
 `;
 
 const Item = ({ children, onDelete }) => (
