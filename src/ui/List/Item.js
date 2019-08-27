@@ -16,6 +16,8 @@ const Text = styled.p`
   font-size: 30px;
   line-height: 30px;
   padding: 20px 30px;
+  box-sizing: border-box;
+  max-width: 500px;
   word-wrap: break-word;
 `;
 
