@@ -25,8 +25,10 @@ function App() {
         <SubmitButton type="submit" value="Add" />
       </Form>
       <List>
-        {list.map((item, i) => (
-          <Item key={i}>{item}</Item>
+        {list.map((listItem, i) => (
+          <Item key={i} onDelete={() => setList(list.filter(item => item !== listItem))}>
+            {listItem}
+          </Item>
         ))}
       </List>
     </Container>
