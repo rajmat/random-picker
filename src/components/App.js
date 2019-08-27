@@ -13,7 +13,7 @@ function App() {
         onSubmit={event => {
           event.preventDefault();
           const value = inputValue.trim();
-          value.length && setList([...list, value]);
+          value.length && setList([value, ...list]);
           setInputValue("");
         }}>
         <TextInput
