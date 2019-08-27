@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { colors, mainFont } from "../../variables";
+import { colors, fonts } from "../../variables";
 
 const ContentText = styled.p`
-  color: ${colors.white};
+  color: ${colors.fieryFuchsia};
   font-size: 26px;
-  font-family: ${mainFont};
+  font-family: ${fonts.mainFont};
 `;
 
 export default ContentText;

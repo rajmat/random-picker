@@ -1,20 +1,24 @@
 import styled from "styled-components";
-import { colors, mainFont } from "../../variables";
+import { colors, fonts } from "../../variables";
 
 const TextInput = styled.input`
-  color: ${colors.white};
-  font-family: ${mainFont};
+  color: ${colors.primaryColor};
+  font-family: ${fonts.mainFont};
   font-size: 30px;
   line-height: 30px;
   background-color: transparent;
   box-sizing: border-box;
   padding: 20px 30px;
   height: 80px;
-  border: 3px solid ${colors.white};
+  width: 500px;
+  border: 3px solid ${colors.secondaryColor};
   border-radius: 100px;
   outline: none;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   &::placeholder {
-    color: ${colors.greyLight};
+    color: ${colors.secondaryColor};
+    opacity: 0.4;
   }
 `;
 
