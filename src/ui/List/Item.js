@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colors, fonts } from "../../variables";
+import { ContentText } from "../Text";
 
 const Container = styled.li`
   box-sizing: border-box;
@@ -9,12 +10,7 @@ const Container = styled.li`
   justify-content: space-between;
 `;
 
-const Text = styled.p`
-  margin: 0;
-  color: ${colors.primaryColor};
-  font-family: ${fonts.mainFont};
-  font-size: 30px;
-  line-height: 30px;
+const ItemText = styled(ContentText)`
   padding: 20px 30px;
   box-sizing: border-box;
   max-width: 500px;
@@ -40,7 +36,7 @@ const Cross = styled.button`
 
 const Item = ({ children, onDelete }) => (
   <Container>
-    <Text>{children}</Text>
+    <ItemText>{children}</ItemText>
     <Cross onClick={onDelete}>x</Cross>
   </Container>
 );

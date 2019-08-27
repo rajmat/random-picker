@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { colors, fonts } from "../../variables";
 
-const ContentText = styled.p`
+const ResultText = styled.p`
   margin: 0;
-  color: ${colors.primaryColor};
+  color: ${colors.secondaryColor};
   font-family: ${fonts.mainFont};
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 65px;
+  word-wrap: break-word;
 `;
 
-export default ContentText;
+export default ResultText;

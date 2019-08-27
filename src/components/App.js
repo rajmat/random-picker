@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Container from "../ui/Container";
-import { ActionButton, AppTitle, Item, UnorderedList } from "../ui";
+import { ActionButton, AppTitle, Item, UnorderedList, ResultView } from "../ui";
 import { AddItemForm } from ".";
 
 function App() {
   const [list, setList] = useState([]);
-  const [randomResult, setRandomResult] = useState("");
+  const [result, setResult] = useState("");
 
   const addItem = item => {
     setList([item, ...list]);
@@ -18,14 +18,24 @@ function App() {
 
   const randomize = () => {
     const result = list[Math.floor(Math.random() * list.length)];
-    setRandomResult(result);
+    setResult(result);
+  };
+
+  const clearList = () => {
+    setList([]);
+    setResult("");
   };
 
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
-      {randomResult ? (
-        <p>{randomResult}</p>
+      {result ? (
+        <ResultView
+          result={result}
+          randomize={randomize}
+          goBack={() => setResult("")}
+          clearList={clearList}
+        />
       ) : (
         <>
           <AddItemForm addItem={addItem} />

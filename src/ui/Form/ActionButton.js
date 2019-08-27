@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, fonts } from "../../variables";
 
 const ActionButton = styled.button`
-  background-color: ${colors.primaryColor};
+  background-color: ${props => (props.secondary ? colors.secondaryColor : colors.primaryColor)};
   color: ${colors.white};
   font-weight: 700;
   font-size: 22px;
