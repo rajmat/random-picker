@@ -2,9 +2,9 @@
 
 Make a list and pick a winner randomly !
 
-A web app made with React hooks.
+A web app made with React and using React hooks.
 
-## Commandes
+## Scripts
 
 #### `npm install`
 
