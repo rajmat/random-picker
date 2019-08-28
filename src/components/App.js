@@ -21,7 +21,7 @@ function App() {
     setTimeout(() => {
       setResult(result);
       setLoading(false);
-    }, 2000);
+    }, 2500);
   };
 
   const emptyList = () => {
