@@ -18,6 +18,7 @@ function AddItemForm({ addItem }) {
         type="text"
         placeholder="Type something..."
         value={inputValue}
+        autoFocus
         onChange={event => setInputValue(event.target.value)}
       />
       <SubmitButton type="submit" value="Add" />
