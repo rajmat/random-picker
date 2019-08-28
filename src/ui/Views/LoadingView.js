@@ -19,9 +19,9 @@ const Text = styled(ContentText)`
   font-size: 40px;
 `;
 
-const LoadingView = () => (
+const LoadingView = ({ text }) => (
   <Container>
-    <Text>And the winner is...</Text>
+    <Text>{text}</Text>
     <Spinner />
   </Container>
 );

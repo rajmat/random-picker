@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Container from "../ui/Container";
-import { ActionButton, AppTitle, Item, UnorderedList, LoadingView } from "../ui";
-import { AddItemForm } from ".";
-import ShowResult from "./ShowResult";
+import { AppTitle, Container, LoadingView } from "../ui";
+import { Result, Main } from ".";
 
 function App() {
   const [list, setList] = useState([]);
@@ -33,29 +31,15 @@ function App() {
 
   const goBack = () => setResult("");
 
-  const ShowList = () => (
-    <>
-      <AddItemForm addItem={addItem} />
-      <UnorderedList>
-        {list.map((listItem, i) => (
-          <Item key={i} onDelete={() => deleteItem(i)}>
-            {listItem}
-          </Item>
-        ))}
-      </UnorderedList>
-      {list.length >= 2 && <ActionButton onClick={randomize}>Randomize</ActionButton>}
-    </>
-  );
-
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
       {isLoading ? (
-        <LoadingView />
+        <LoadingView text="And the winner is..." />
       ) : result ? (
-        <ShowResult result={result} randomize={randomize} goBack={goBack} emptyList={emptyList} />
+        <Result result={result} randomize={randomize} goBack={goBack} emptyList={emptyList} />
       ) : (
-        <ShowList />
+        <Main list={list} addItem={addItem} deleteItem={deleteItem} randomize={randomize} />
       )}
     </Container>
   );
