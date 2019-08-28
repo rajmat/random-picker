@@ -1,10 +1,10 @@
 import React from "react";
 import { ResultView, ActionButton } from "../ui";
 
-function ShowResult({ result, randomize, goBack, emptyList }) {
+function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
     <ResultView result={result}>
-      <ActionButton onClick={randomize}>Randomize again</ActionButton>
+      <ActionButton onClick={randomPick}>Pick again</ActionButton>
       <ActionButton onClick={emptyList}>New list</ActionButton>
       <ActionButton secondary onClick={goBack}>
         Go back

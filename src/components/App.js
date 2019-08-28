@@ -14,7 +14,7 @@ function App() {
     setList(filteredList);
   };
 
-  const randomize = () => {
+  const randomPick = () => {
     setLoading(true);
     setResult("");
     const result = list[Math.floor(Math.random() * list.length)];
@@ -33,13 +33,13 @@ function App() {
 
   return (
     <Container>
-      <AppTitle>Randomizer</AppTitle>
+      <AppTitle>Random Picker</AppTitle>
       {isLoading ? (
         <LoadingView text="And the winner is..." />
       ) : result ? (
-        <Result result={result} randomize={randomize} goBack={goBack} emptyList={emptyList} />
+        <Result result={result} randomPick={randomPick} goBack={goBack} emptyList={emptyList} />
       ) : (
-        <Main list={list} addItem={addItem} deleteItem={deleteItem} randomize={randomize} />
+        <Main list={list} addItem={addItem} deleteItem={deleteItem} randomPick={randomPick} />
       )}
     </Container>
   );

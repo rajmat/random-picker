@@ -1,4 +1,4 @@
 import Item from "./Item";
-import UnorderedList from "./UnorderedList";
+import List from "./List";
 
-export { Item, UnorderedList };
+export { Item, List };
