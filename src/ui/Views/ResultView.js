@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { ResultText } from "../Text";
-import { ActionButton } from "../Form";
 
 const Container = styled.div`
   width: 600px;
@@ -11,23 +10,16 @@ const Container = styled.div`
 
 const ButtonsContainer = styled.div`
   margin-top: 150px;
+  & > button {
+    margin: 15px auto;
+    display: block;
+  }
 `;
 
-const Button = styled(ActionButton)`
-  margin: 15px auto;
-  display: block;
-`;
-
-const ResultView = ({ result, randomize, clearList, goBack }) => (
+const ResultView = ({ result, children }) => (
   <Container>
     <ResultText>{result}</ResultText>
-    <ButtonsContainer>
-      <Button onClick={randomize}>Randomize again</Button>
-      <Button onClick={clearList}>Create a new list</Button>
-      <Button secondary onClick={goBack}>
-        Go back
-      </Button>
-    </ButtonsContainer>
+    <ButtonsContainer>{children}</ButtonsContainer>
   </Container>
 );
 
