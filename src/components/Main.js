@@ -13,7 +13,7 @@ function Main({ list, addItem, deleteItem, randomPick }) {
           </Item>
         ))}
       </List>
-      {list.length >= 2 && <ActionButton onClick={randomPick}>Pick a winner</ActionButton>}
+      {list.length > 1 && <ActionButton onClick={randomPick}>Pick a winner</ActionButton>}
     </>
   );
 }
