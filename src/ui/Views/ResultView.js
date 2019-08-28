@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { ResultText } from "./Text";
-import { ActionButton } from "./Form";
+import { ResultText } from "../Text";
+import { ActionButton } from "../Form";
 
 const Container = styled.div`
   width: 600px;
