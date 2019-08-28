@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Container from "../ui/Container";
-import { ActionButton, AppTitle, Item, UnorderedList, ResultView } from "../ui";
+import { ActionButton, AppTitle, Item, UnorderedList } from "../ui";
 import { AddItemForm } from ".";
+import ShowResult from "./ShowResult";
 
 function App() {
   const [list, setList] = useState([]);
@@ -26,28 +27,32 @@ function App() {
     setResult("");
   };
 
+  const ShowList = () => (
+    <>
+      <AddItemForm addItem={addItem} />
+      <UnorderedList>
+        {list.map((listItem, i) => (
+          <Item key={i} onDelete={() => deleteItem(i)}>
+            {listItem}
+          </Item>
+        ))}
+      </UnorderedList>
+      {list.length >= 2 && <ActionButton onClick={randomize}>Randomize</ActionButton>}
+    </>
+  );
+
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
       {result ? (
-        <ResultView
+        <ShowResult
           result={result}
           randomize={randomize}
           goBack={() => setResult("")}
           clearList={clearList}
         />
       ) : (
-        <>
-          <AddItemForm addItem={addItem} />
-          <UnorderedList>
-            {list.map((listItem, i) => (
-              <Item key={i} onDelete={() => deleteItem(i)}>
-                {listItem}
-              </Item>
-            ))}
-          </UnorderedList>
-          {list.length >= 2 && <ActionButton onClick={randomize}>Randomize</ActionButton>}
-        </>
+        <ShowList />
       )}
     </Container>
   );
