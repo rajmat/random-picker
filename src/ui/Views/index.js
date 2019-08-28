@@ -1,3 +1,4 @@
+import LoadingView from "./LoadingView";
 import ResultView from "./ResultView";
 
-export { ResultView };
+export { LoadingView, ResultView };

@@ -4,7 +4,7 @@ import { colors } from "../variables";
 
 const Container = styled.div`
   width: 70px;
-  margin: 100px;
+  margin: 20px;
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -25,8 +25,8 @@ const Bounce = styled.div`
   height: 18px;
   background-color: ${colors.primaryColor};
   border-radius: 100%;
-  -webkit-animation: ${bouncedelay} 1.2s infinite ease-in-out both;
-  animation: ${bouncedelay} 1.2s infinite ease-in-out both;
+  -webkit-animation: ${bouncedelay} 1.5s infinite ease-in-out both;
+  animation: ${bouncedelay} 1.5s infinite ease-in-out both;
 `;
 
 const Bounce1 = styled(Bounce)`
