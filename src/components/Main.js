@@ -1,5 +1,5 @@
 import React from "react";
-import { ActionButton, Item, List } from "../ui";
+import { ContainedButton, Item, List } from "../ui";
 import { AddItemForm } from ".";
 
 function Main({ list, addItem, deleteItem, randomPick }) {
@@ -13,7 +13,7 @@ function Main({ list, addItem, deleteItem, randomPick }) {
           </Item>
         ))}
       </List>
-      {list.length > 1 && <ActionButton onClick={randomPick}>Pick a winner</ActionButton>}
+      {list.length > 1 && <ContainedButton onClick={randomPick}>Pick a winner</ContainedButton>}
     </>
   );
 }

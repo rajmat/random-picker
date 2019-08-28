@@ -1,14 +1,14 @@
 import React from "react";
-import { ResultView, ActionButton } from "../ui";
+import { ResultView, ContainedButton } from "../ui";
 
 function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
     <ResultView result={result}>
-      <ActionButton onClick={randomPick}>Pick again</ActionButton>
-      <ActionButton onClick={emptyList}>Make a new list</ActionButton>
-      <ActionButton secondary onClick={goBack}>
+      <ContainedButton onClick={randomPick}>Pick again</ContainedButton>
+      <ContainedButton onClick={emptyList}>Make a new list</ContainedButton>
+      <ContainedButton secondary onClick={goBack}>
         Go back
-      </ActionButton>
+      </ContainedButton>
     </ResultView>
   );
 }
