@@ -7,6 +7,7 @@ import ShowResult from "./ShowResult";
 function App() {
   const [list, setList] = useState([]);
   const [result, setResult] = useState("");
+  const [resultView, setResultView] = useState(false);
 
   const addItem = item => {
     setList([item, ...list]);
@@ -18,12 +19,22 @@ function App() {
   };
 
   const randomize = () => {
+    setResult("");
+    setResultView(true);
     const result = list[Math.floor(Math.random() * list.length)];
-    setResult(result);
+    setTimeout(() => {
+      setResult(result);
+    }, 2000);
   };
 
   const clearList = () => {
+    setResultView(false);
     setList([]);
+    setResult("");
+  };
+
+  const goBack = () => {
+    setResultView(false);
     setResult("");
   };
 
@@ -44,13 +55,8 @@ function App() {
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
-      {result ? (
-        <ShowResult
-          result={result}
-          randomize={randomize}
-          goBack={() => setResult("")}
-          clearList={clearList}
-        />
+      {resultView ? (
+        <ShowResult result={result} randomize={randomize} goBack={goBack} clearList={clearList} />
       ) : (
         <ShowList />
       )}

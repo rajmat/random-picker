@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { LoadingView, ResultView, ActionButton } from "../ui";
 
 function ShowResult({ result, randomize, goBack, clearList }) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2500);
-    return () => clearTimeout(timer);
-  });
-
-  if (isLoading) {
-    return <LoadingView />;
-  } else {
+  if (result) {
     return (
       <ResultView result={result}>
         <ActionButton onClick={randomize}>Randomize again</ActionButton>
@@ -21,6 +12,8 @@ function ShowResult({ result, randomize, goBack, clearList }) {
         </ActionButton>
       </ResultView>
     );
+  } else {
+    return <LoadingView />;
   }
 }
 
