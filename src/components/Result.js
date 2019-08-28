@@ -5,7 +5,7 @@ function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
     <ResultView result={result}>
       <ActionButton onClick={randomPick}>Pick again</ActionButton>
-      <ActionButton onClick={emptyList}>New list</ActionButton>
+      <ActionButton onClick={emptyList}>Make a new list</ActionButton>
       <ActionButton secondary onClick={goBack}>
         Go back
       </ActionButton>
