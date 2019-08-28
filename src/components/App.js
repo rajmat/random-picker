@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import Container from "../ui/Container";
-import { ActionButton, AppTitle, Item, UnorderedList } from "../ui";
+import { ActionButton, AppTitle, Item, UnorderedList, LoadingView } from "../ui";
 import { AddItemForm } from ".";
 import ShowResult from "./ShowResult";
 
 function App() {
   const [list, setList] = useState([]);
   const [result, setResult] = useState("");
-  const [resultView, setResultView] = useState(false);
+  const [isLoading, setLoading] = useState(false);
 
-  const addItem = item => {
-    setList([item, ...list]);
-  };
+  const addItem = item => setList([item, ...list]);
 
   const deleteItem = index => {
     const filteredList = list.filter((item, i) => i !== index);
@@ -19,24 +17,21 @@ function App() {
   };
 
   const randomize = () => {
+    setLoading(true);
     setResult("");
-    setResultView(true);
     const result = list[Math.floor(Math.random() * list.length)];
     setTimeout(() => {
       setResult(result);
+      setLoading(false);
     }, 2000);
   };
 
-  const clearList = () => {
-    setResultView(false);
+  const emptyList = () => {
     setList([]);
     setResult("");
   };
 
-  const goBack = () => {
-    setResultView(false);
-    setResult("");
-  };
+  const goBack = () => setResult("");
 
   const ShowList = () => (
     <>
@@ -55,8 +50,10 @@ function App() {
   return (
     <Container>
       <AppTitle>Randomizer</AppTitle>
-      {resultView ? (
-        <ShowResult result={result} randomize={randomize} goBack={goBack} clearList={clearList} />
+      {isLoading ? (
+        <LoadingView />
+      ) : result ? (
+        <ShowResult result={result} randomize={randomize} goBack={goBack} emptyList={emptyList} />
       ) : (
         <ShowList />
       )}
