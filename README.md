@@ -1,6 +1,6 @@
-# Randomizer
+# Random Picker
 
-Create a list and randomize !
+Make a list and pick a winner randomly !
 
 A web app made with React hooks.
 
