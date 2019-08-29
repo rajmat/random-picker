@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { fadeInScale, slideInBottom } from "../../animations";
 import { ResultText } from "../Text";
 
 const Container = styled.div`
@@ -18,44 +19,10 @@ const TextContainer = styled.div`
   align-items: center;
 `;
 
-const fadeInScale = keyframes`
-  0% {
-		transform: scale(0);
-		opacity: 0;		
-	}
-	60% {
-		transform: scale(1.1);	
-	}
-	80% {
-		transform: scale(0.9);
-		opacity: 1;	
-	}	
-	100% {
-		transform: scale(1);
-		opacity: 1;	
-	}
-`;
-
 const AnimatedResultText = styled(ResultText)`
   animation: ${fadeInScale} 1s ease-in-out;
   -webkit-animation: ${fadeInScale} 1s ease-in-out;
   visibility: visible;
-`;
-
-const slideInBottom = keyframes`
-  0% {
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: translateY(80px);
-    transform: translateY(80px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
 `;
 
 const ButtonsContainer = styled.div`
