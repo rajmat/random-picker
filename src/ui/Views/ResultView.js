@@ -5,20 +5,34 @@ import { ResultText } from "../Text";
 const Container = styled.div`
   width: 600px;
   text-align: center;
-  padding-top: 150px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const TextContainer = styled.div`
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ButtonsContainer = styled.div`
-  margin-top: 150px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   & > button {
-    margin: 15px auto;
-    display: block;
+    margin: 10px auto;
   }
 `;
 
 const ResultView = ({ result, children }) => (
   <Container>
-    <ResultText>{result}</ResultText>
+    <TextContainer>
+      <ResultText>{result}</ResultText>
+    </TextContainer>
     <ButtonsContainer>{children}</ButtonsContainer>
   </Container>
 );

@@ -6,7 +6,10 @@ const AppTitle = styled.h1`
   font-size: 70px;
   font-family: ${fonts.mainFont};
   font-weight: 700;
-  margin: 40px auto;
+  margin: 0;
+  height: 20vh;
+  display: flex;
+  align-items: center;
 `;
 
 export default AppTitle;

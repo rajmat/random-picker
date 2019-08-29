@@ -5,9 +5,10 @@ import { ContentText } from "../Text";
 import Spinner from "../Spinner";
 
 const Container = styled.div`
-  padding: 150px 0;
+  height: 60vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 
