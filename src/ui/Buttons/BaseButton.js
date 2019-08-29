@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { fonts } from "../../variables";
+import { pulse } from "../../animations";
 
 const BaseButton = styled.button`
   font-size: ${props => (props.small ? "20px" : "22px")};
@@ -10,6 +11,14 @@ const BaseButton = styled.button`
   padding: 0 ${props => (props.small ? "25px" : "30px")};
   cursor: pointer;
   outline: none;
+  ${props =>
+    props.pulseAnimated &&
+    css`
+      animation: ${pulse} 3s infinite;
+      &:hover {
+        animation: none;
+      }
+    `}
 `;
 
 export default BaseButton;

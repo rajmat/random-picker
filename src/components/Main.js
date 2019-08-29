@@ -13,7 +13,11 @@ function Main({ list, addItem, deleteItem, randomPick }) {
           </Item>
         ))}
       </List>
-      {list.length > 1 && <ContainedButton onClick={randomPick}>Pick a winner</ContainedButton>}
+      {list.length > 1 && (
+        <ContainedButton pulseAnimated onClick={randomPick}>
+          Pick a winner
+        </ContainedButton>
+      )}
     </>
   );
 }
