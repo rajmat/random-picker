@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fonts } from "../../variables";
+import { colors } from "../../variables";
 import { ContainedButton } from "../Buttons";
 
 const Button = styled(ContainedButton)`
