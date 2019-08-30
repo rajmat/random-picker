@@ -1,6 +1,7 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { colors } from "../variables";
+import { bounceDelay } from "../animations";
 
 const Container = styled.div`
   width: 70px;
@@ -10,23 +11,13 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-const bouncedelay = keyframes`
-  0%, 80%, 100% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 40% { 
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-`;
-
 const Bounce = styled.div`
   width: 18px;
   height: 18px;
   background-color: ${colors.primaryColor};
   border-radius: 100%;
-  -webkit-animation: ${bouncedelay} 1.5s infinite ease-in-out both;
-  animation: ${bouncedelay} 1.5s infinite ease-in-out both;
+  -webkit-animation: ${bounceDelay} 1.5s infinite ease-in-out both;
+  animation: ${bounceDelay} 1.5s infinite ease-in-out both;
 `;
 
 const Bounce1 = styled(Bounce)`
