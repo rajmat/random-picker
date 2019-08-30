@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { colors, fonts } from "../../variables";
+import { fonts } from "../../variables";
 
 const ResultText = styled.p`
   margin: 0;
-  color: ${colors.secondaryColor};
+  color: ${props => props.color};
   font-family: ${fonts.mainFont};
   font-size: 65px;
   word-wrap: break-word;

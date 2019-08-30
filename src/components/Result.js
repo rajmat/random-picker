@@ -3,7 +3,7 @@ import { ResultView, ContainedButton, OutlinedButton } from "../ui";
 
 function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
-    <ResultView result={result}>
+    <ResultView result={result.text} color={result.color}>
       <ContainedButton small color="primary" onClick={randomPick}>
         Pick again
       </ContainedButton>

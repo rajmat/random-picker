@@ -42,10 +42,10 @@ const ButtonsContainer = styled.div`
   }
 `;
 
-const ResultView = ({ result, children }) => (
+const ResultView = ({ result, children, color }) => (
   <Container>
     <TextContainer>
-      <AnimatedResultText>{result}</AnimatedResultText>
+      <AnimatedResultText color={color}>{result}</AnimatedResultText>
     </TextContainer>
     <ButtonsContainer>{children}</ButtonsContainer>
   </Container>

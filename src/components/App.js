@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import uuid from "uuid";
+import { assignColorToListItem } from "../utils/functions";
 import { AppTitle, Container, LoadingView } from "../ui";
 import { Result, Main } from ".";
 
@@ -8,7 +9,10 @@ function App() {
   const [result, setResult] = useState("");
   const [isLoading, setLoading] = useState(false);
 
-  const addItem = text => setList([{ id: uuid(), text }, ...list]);
+  const addItem = text => {
+    const item = { id: uuid(), color: assignColorToListItem(list), text };
+    setList([item, ...list]);
+  }
 
   const deleteItem = index => {
     const filteredList = list.filter(item => item.id !== index);
@@ -20,7 +24,7 @@ function App() {
     setResult("");
     const result = list[Math.floor(Math.random() * list.length)];
     setTimeout(() => {
-      setResult(result.text);
+      setResult(result);
       setLoading(false);
     }, 2500);
   };

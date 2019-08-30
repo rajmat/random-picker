@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors, fonts } from "../../variables";
 
 const TextInput = styled.input`
-  color: ${colors.primaryColor};
+  color: ${props => props.color};
   font-family: ${fonts.mainFont};
   font-size: 30px;
   line-height: 30px;

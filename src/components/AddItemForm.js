@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Form, TextInput, SubmitButton } from "../ui";
+import { assignColorToListItem } from "../utils/functions";
 
-function AddItemForm({ addItem }) {
+function AddItemForm({ addItem, list }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = event => {
@@ -18,6 +19,7 @@ function AddItemForm({ addItem }) {
         type="text"
         placeholder="Type something..."
         value={inputValue}
+        color={assignColorToListItem(list)}
         autoFocus
         onChange={event => setInputValue(event.target.value)}
       />

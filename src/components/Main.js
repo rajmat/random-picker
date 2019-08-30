@@ -8,12 +8,12 @@ import "../animations/item-transitions.css";
 function Main({ list, addItem, deleteItem, randomPick }) {
   return (
     <ListView>
-      <AddItemForm addItem={addItem} />
+      <AddItemForm addItem={addItem} list={list} />
       <List>
         <TransitionGroup>
           {list.map(item => (
             <CSSTransition key={item.id} timeout={500} classNames="item">
-              <Item onDelete={() => deleteItem(item.id)}>{item.text}</Item>
+              <Item color={item.color} onDelete={() => deleteItem(item.id)}>{item.text}</Item>
             </CSSTransition>
           ))}
         </TransitionGroup>

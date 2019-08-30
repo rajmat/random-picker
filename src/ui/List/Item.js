@@ -11,6 +11,7 @@ const Container = styled.li`
 `;
 
 const ItemText = styled(ContentText)`
+  color: ${props => props.color};
   padding: 20px 30px;
   box-sizing: border-box;
   max-width: 500px;
@@ -34,9 +35,9 @@ const Cross = styled.button`
   }
 `;
 
-const Item = ({ children, onDelete }) => (
+const Item = ({ children, onDelete, color }) => (
   <Container>
-    <ItemText>{children}</ItemText>
+    <ItemText color={color}>{children}</ItemText>
     <Cross onClick={onDelete}>x</Cross>
   </Container>
 );
