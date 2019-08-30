@@ -19,7 +19,7 @@ function Main({ list, addItem, deleteItem, randomPick }) {
         </TransitionGroup>
       </List>
       {list.length > 1 && (
-        <ContainedButton pulseAnimated onClick={randomPick}>
+        <ContainedButton color="primary" pulseAnimated onClick={randomPick}>
           Pick a winner
         </ContainedButton>
       )}

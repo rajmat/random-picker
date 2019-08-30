@@ -21,7 +21,9 @@ function AddItemForm({ addItem }) {
         autoFocus
         onChange={event => setInputValue(event.target.value)}
       />
-      <SubmitButton type="submit" value="Add" />
+      <SubmitButton type="submit" color="secondary">
+        Add
+      </SubmitButton>
     </Form>
   );
 }

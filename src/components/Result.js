@@ -4,13 +4,13 @@ import { ResultView, ContainedButton, OutlinedButton } from "../ui";
 function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
     <ResultView result={result}>
-      <ContainedButton small onClick={randomPick}>
+      <ContainedButton small color="primary" onClick={randomPick}>
         Pick again
       </ContainedButton>
-      <ContainedButton small secondary onClick={emptyList}>
+      <ContainedButton small color="secondary" onClick={emptyList}>
         Make a new list
       </ContainedButton>
-      <OutlinedButton small secondary onClick={goBack}>
+      <OutlinedButton small color="secondary" onClick={goBack}>
         Go back
       </OutlinedButton>
     </ResultView>
