@@ -1,13 +1,13 @@
 import React from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { ContainedButton, Item, List } from "../ui";
+import { ContainedButton, Item, List, ListView } from "../ui";
 import { AddItemForm } from ".";
 
 import "../animations/item-transitions.css";
 
 function Main({ list, addItem, deleteItem, randomPick }) {
   return (
-    <>
+    <ListView>
       <AddItemForm addItem={addItem} />
       <List>
         <TransitionGroup>
@@ -23,7 +23,7 @@ function Main({ list, addItem, deleteItem, randomPick }) {
           Pick a winner
         </ContainedButton>
       )}
-    </>
+    </ListView>
   );
 }
 

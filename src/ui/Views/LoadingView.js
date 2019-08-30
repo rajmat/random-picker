@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { fonts, colors } from "../../variables";
 import { ContentText } from "../Text";
 import Spinner from "../Spinner";
+import { fadeIn } from "../../animations";
 
 const Container = styled.div`
   height: 60vh;
@@ -10,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: ${fadeIn} 0.5s;
 `;
 
 const Text = styled(ContentText)`
