@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import uuid from "uuid";
 import { AppTitle, Container, LoadingView } from "../ui";
 import { Result, Main } from ".";
 
@@ -7,10 +8,10 @@ function App() {
   const [result, setResult] = useState("");
   const [isLoading, setLoading] = useState(false);
 
-  const addItem = item => setList([item, ...list]);
+  const addItem = text => setList([{ id: uuid(), text }, ...list]);
 
   const deleteItem = index => {
-    const filteredList = list.filter((item, i) => i !== index);
+    const filteredList = list.filter(item => item.id !== index);
     setList(filteredList);
   };
 
@@ -19,7 +20,7 @@ function App() {
     setResult("");
     const result = list[Math.floor(Math.random() * list.length)];
     setTimeout(() => {
-      setResult(result);
+      setResult(result.text);
       setLoading(false);
     }, 2500);
   };
