@@ -1,6 +1,6 @@
 import { keyframes } from "styled-components";
 
-const slideInBottom = keyframes`
+const slideUpFadeIn = keyframes`
   0% {
     opacity: 0;
     cursor: auto;
@@ -19,4 +19,4 @@ const slideInBottom = keyframes`
   }
 `;
 
-export default slideInBottom;
+export default slideUpFadeIn;

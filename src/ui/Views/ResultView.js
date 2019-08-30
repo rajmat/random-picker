@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fadeInScale, slideInBottom } from "../../animations";
+import { fadeInScale, slideUpFadeIn } from "../../animations";
 import { ResultText } from "../Text";
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const ButtonsContainer = styled.div`
   justify-content: center;
   & > button {
     margin: 10px auto;
-    animation: ${slideInBottom} 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: ${slideUpFadeIn} 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
   & > button:first-child {
     animation-duration: 2s;
