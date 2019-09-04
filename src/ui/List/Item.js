@@ -19,7 +19,7 @@ const ItemText = styled(ContentText)`
 `;
 
 const Cross = styled.button`
-  color: ${colors.secondaryColor};
+  color: ${props => props.color};
   font-family: ${fonts.mainFont};
   font-size: 30px;
   line-height: 30px;
@@ -38,7 +38,7 @@ const Cross = styled.button`
 const Item = ({ children, onDelete, color }) => (
   <Container>
     <ItemText color={color}>{children}</ItemText>
-    <Cross onClick={onDelete}>x</Cross>
+    <Cross color={color} onClick={onDelete}>x</Cross>
   </Container>
 );
 
