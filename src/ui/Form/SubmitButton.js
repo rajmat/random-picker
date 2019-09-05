@@ -1,21 +1,31 @@
 import styled from "styled-components";
-import { colors, mainFont } from "../../variables";
+import { colors } from "../../variables";
+import { ContainedButton } from "../Buttons";
 
-const Button = styled.input`
-  background-color: ${colors.white};
-  color: ${colors.blueDark};
-  font-weight: 700;
-  font-size: 22px;
-  font-family: ${mainFont};
-  height: 60px;
+const Button = styled(ContainedButton)`
+  background-color: ${props => colors[`${props.color}Color`]};
+  color: ${colors.white};
   width: 75px;
-  border-radius: 50px;
   padding: 0;
   margin-left: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: none;
+  @media (max-width: 768px) {
+    font-size: 21px;
+    min-height: 55px;
+  }
+  @media (max-width: 550px) {
+    font-size: 18px;
+    width: 60px;
+    min-height: 50px;
+    margin-left: 10px;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
+    min-height: 45px;
+    margin-left: 10px;
+  }
 `;
 
 export default Button;

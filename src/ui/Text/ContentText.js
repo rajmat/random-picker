@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { colors, mainFont } from "../../variables";
+import { colors, fonts } from "../../variables";
 
 const ContentText = styled.p`
-  color: ${colors.white};
-  font-size: 26px;
-  font-family: ${mainFont};
+  margin: 0;
+  color: ${colors.primaryColor};
+  font-family: ${fonts.mainFont};
+  font-size: 30px;
+  line-height: 30px;
 `;
 
 export default ContentText;
