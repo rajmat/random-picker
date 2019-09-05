@@ -4,7 +4,6 @@ import { fadeInScale, slideUpFadeIn } from "../../animations";
 import { ResultText } from "../Text";
 
 const Container = styled.div`
-  width: 600px;
   text-align: center;
   height: 80vh;
   display: flex;

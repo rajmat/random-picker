@@ -2,7 +2,7 @@
   "name": "randomizer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shamshams.github.io/Randomizer/",
+  "homepage": "https://shamshams.github.io/random-picker/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

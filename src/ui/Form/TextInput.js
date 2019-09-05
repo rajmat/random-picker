@@ -10,7 +10,7 @@ const TextInput = styled.input`
   box-sizing: border-box;
   padding: 20px 25px;
   height: 80px;
-  max-width: 80%;
+  width: 80%;
   border: 3px solid ${colors.secondaryColor};
   border-radius: 100px;
   outline: none;

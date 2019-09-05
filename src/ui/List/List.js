@@ -4,7 +4,7 @@ const List = styled.ul`
   list-style-type: none;
   width: 85%;
   padding-inline-start: 0;
-  margin: auto auto 20px auto;
+  margin: 20px auto;
   @media (max-width: 550px) {
     width: 75%;
   }
