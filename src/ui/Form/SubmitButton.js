@@ -11,6 +11,21 @@ const Button = styled(ContainedButton)`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    font-size: 21px;
+    min-height: 55px;
+  }
+  @media (max-width: 550px) {
+    font-size: 18px;
+    width: 60px;
+    min-height: 50px;
+    margin-left: 10px;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
+    min-height: 45px;
+    margin-left: 10px;
+  }
 `;
 
 export default Button;

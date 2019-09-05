@@ -8,9 +8,9 @@ const TextInput = styled.input`
   line-height: 30px;
   background-color: transparent;
   box-sizing: border-box;
-  padding: 20px 30px;
+  padding: 20px 25px;
   height: 80px;
-  width: 500px;
+  max-width: 80%;
   border: 3px solid ${colors.secondaryColor};
   border-radius: 100px;
   outline: none;
@@ -19,6 +19,19 @@ const TextInput = styled.input`
   &::placeholder {
     color: ${colors.secondaryColor};
     opacity: 0.4;
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+    height: 70px;
+  }
+  @media (max-width: 550px) {
+    font-size: 22px;
+    height: 60px;
+    padding: 20px 15px;
+  }
+  @media (max-width: 400px) {
+    font-size: 20px;
+    height: 55px;
   }
 `;
 

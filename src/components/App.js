@@ -12,7 +12,7 @@ function App() {
   const addItem = text => {
     const item = { id: uuid(), color: assignColorToListItem(list), text };
     setList([item, ...list]);
-  }
+  };
 
   const deleteItem = index => {
     const filteredList = list.filter(item => item.id !== index);

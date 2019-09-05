@@ -9,6 +9,12 @@ const Container = styled.div`
   text-align: center;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 550px) {
+    width: 60px;
+  }
+  @media (max-width: 400px) {
+    width: 50px;
+  }
 `;
 
 const Bounce = styled.div`
@@ -18,6 +24,18 @@ const Bounce = styled.div`
   border-radius: 100%;
   -webkit-animation: ${bounceDelay} 1.5s infinite ease-in-out both;
   animation: ${bounceDelay} 1.5s infinite ease-in-out both;
+  @media (max-width: 768px) {
+    width: 15px;
+    height: 15px;
+  }
+  @media (max-width: 550px) {
+    width: 13px;
+    height: 13px;
+  }
+  @media (max-width: 400px) {
+    width: 10px;
+    height: 10px;
+  }
 `;
 
 const Bounce1 = styled(Bounce)`

@@ -7,6 +7,15 @@ const ResultText = styled.p`
   font-family: ${fonts.mainFont};
   font-size: 65px;
   word-wrap: break-word;
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+  @media (max-width: 550px) {
+    font-size: 35px;
+  }
+  @media (max-width: 400px) {
+    font-size: 28px;
+  }
 `;
 
 export default ResultText;

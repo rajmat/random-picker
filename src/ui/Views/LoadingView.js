@@ -16,10 +16,23 @@ const Container = styled.div`
 
 const Text = styled(ContentText)`
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: ${colors.secondaryColor};
   font-family: ${fonts.mainFont};
   font-size: 40px;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 550px) {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 380px) {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
 `;
 
 const LoadingView = ({ text }) => (

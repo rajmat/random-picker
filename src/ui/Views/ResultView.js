@@ -10,6 +10,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    height: 83vh;
+  }
+  @media (max-width: 380px) {
+    height: 87vh;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -17,6 +23,9 @@ const TextContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 380px) {
+    height: 62vh;
+  }
 `;
 
 const AnimatedResultText = styled(ResultText)`
@@ -26,13 +35,19 @@ const AnimatedResultText = styled(ResultText)`
 `;
 
 const ButtonsContainer = styled.div`
-  height: 30vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   & > button {
     margin: 10px auto;
     animation: ${slideUpFadeIn} 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    @media (max-width: 768px) {
+      margin: 8px auto;
+    }
+    @media (max-width: 550px) {
+      margin: 6px auto;
+    }
   }
   & > button:first-child {
     animation-duration: 2s;
