@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import uuid from "uuid";
+import "typeface-comfortaa";
 import { assignColorToListItem } from "../utils/functions";
 import { AppTitle, Container, LoadingView, GlobalStyles } from "../ui";
 import { Result, Main } from ".";
