@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import uuid from "uuid";
 import { assignColorToListItem } from "../utils/functions";
-import { AppTitle, Container, LoadingView } from "../ui";
+import { AppTitle, Container, LoadingView, GlobalStyles } from "../ui";
 import { Result, Main } from ".";
 
 function App() {
@@ -38,6 +38,7 @@ function App() {
 
   return (
     <Container>
+      <GlobalStyles />
       <AppTitle>Random Picker</AppTitle>
       {isLoading ? (
         <LoadingView text="And the winner is..." />
