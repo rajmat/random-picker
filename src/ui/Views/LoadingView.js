@@ -19,6 +19,7 @@ const Text = styled(ContentText)`
   margin-bottom: 40px;
   color: ${colors.secondaryColor};
   font-family: ${fonts.mainFont};
+  font-weight: 700;
   font-size: 40px;
   text-align: center;
   @media (max-width: 768px) {

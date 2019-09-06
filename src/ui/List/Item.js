@@ -1,5 +1,5 @@
 import React from "react";
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { colors, fonts } from "../../variables";
 import { ContentText } from "../Text";
 
@@ -43,6 +43,7 @@ const ItemText = styled(ContentText)`
 const Cross = styled.button`
   color: ${props => props.color};
   font-family: ${fonts.mainFont};
+  font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   border: none;
@@ -61,7 +62,9 @@ const Cross = styled.button`
 const Item = ({ children, onDelete, color }) => (
   <Container>
     <ItemText color={color}>{children}</ItemText>
-    <Cross color={color} onClick={onDelete}>x</Cross>
+    <Cross color={color} onClick={onDelete}>
+      x
+    </Cross>
   </Container>
 );
 

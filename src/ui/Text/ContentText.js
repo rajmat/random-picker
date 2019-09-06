@@ -5,6 +5,7 @@ const ContentText = styled.p`
   margin: 0;
   color: ${colors.primaryColor};
   font-family: ${fonts.mainFont};
+  font-weight: 700;
   font-size: 30px;
   line-height: 30px;
 `;

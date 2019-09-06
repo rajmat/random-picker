@@ -5,6 +5,7 @@ const TextInput = styled.input`
   color: ${props => props.color};
   font-family: ${fonts.mainFont};
   font-size: 30px;
+  font-weight: 700;
   line-height: 30px;
   background-color: transparent;
   box-sizing: border-box;
