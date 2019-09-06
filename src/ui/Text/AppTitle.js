@@ -17,10 +17,11 @@ const AppTitle = styled.h1`
   }
   @media (max-width: 550px) {
     font-size: 43px;
+    min-height: 100px;
   }
   @media (max-width: 380px) {
-    min-height: 105px;
     font-size: 34px;
+    min-height: 90px;
   }
 `;
 

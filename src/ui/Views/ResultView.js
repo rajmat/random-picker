@@ -9,12 +9,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 768px) {
-    height: 83vh;
-  }
-  @media (max-width: 380px) {
-    height: 87vh;
-  }
 `;
 
 const TextContainer = styled.div`

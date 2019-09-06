@@ -3,7 +3,6 @@ import { colors } from "../variables";
 
 const Container = styled.div`
   background-color: ${colors.white};
-  height: 100vh;
   max-width: 600px;
   display: flex;
   flex-direction: column;
