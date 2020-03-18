@@ -1,7 +1,9 @@
 # Random Picker
 
+![](screenshot.png)  
+
 Make a list and pick a winner randomly !  
-A web app made with React and using React hooks.
+A web app made with React.
 
 ## Installation
 
