@@ -3,9 +3,9 @@ import { colors, fonts } from "../../variables";
 
 const AppTitle = styled.h1`
   color: ${colors.primaryColor};
-  font-size: 70px;
+  font-size: 40px;
   font-family: ${fonts.mainFont};
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin: 0;
   min-height: 160px;

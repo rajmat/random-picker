@@ -1,11 +1,12 @@
 const base = {
+  black: "#000000",
   white: "#fff",
   buttercupYellow: "#f39c12",
   jaffaOrange: "#f27935",
   teal: "#26a69a",
   jungleGreen: "#26c281",
   azraqBlue: "#4a69bd",
-  dodgerBlue: "#22a7f0",
+  dodgerBlue: "#0079C5",
   ceSoirPurple: "#a96dad",
   chestnutRose: "#d24d57",
   fieryFuchsia: "#B33771",
@@ -16,18 +17,12 @@ const base = {
 
 export default {
   ...base,
-  primaryColor: base.fieryFuchsia,
+  primaryColor: base.black,
   primaryColorLighter: base.fieryFuchsiaLighter,
-  secondaryColor: base.magentaPurple,
+  secondaryColor: base.dodgerBlue,
   secondaryColorLighter: base.magentaPurpleLighter,
   itemColors: [
     base.azraqBlue,
-    base.chestnutRose,
-    base.teal, 
-    base.buttercupYellow,
-    base.dodgerBlue,
-    base.jaffaOrange, 
-    base.jungleGreen,
-    base.ceSoirPurple,
+    base.black,
   ],
 };

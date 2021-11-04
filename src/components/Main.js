@@ -20,7 +20,7 @@ function Main({ list, addItem, deleteItem, randomPick }) {
       </List>
       {list.length > 1 && (
         <ContainedButton color="primary" pulseAnimated onClick={randomPick}>
-          Pick a winner
+          Nézzük a győztest
         </ContainedButton>
       )}
     </ListView>

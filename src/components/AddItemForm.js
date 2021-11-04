@@ -17,7 +17,7 @@ function AddItemForm({ addItem, list }) {
     <Form onSubmit={handleSubmit}>
       <TextInput
         type="text"
-        placeholder="Type something..."
+        placeholder="Add hozzá a neveket..."
         value={inputValue}
         color={assignColorToListItem(list)}
         autoFocus

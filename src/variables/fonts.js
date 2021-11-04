@@ -1,3 +1,3 @@
-const mainFont = "'Comfortaa', Arial, sans-serif";
+const mainFont = "'Roboto', sans-serif";
 
 export default { mainFont };

@@ -10,7 +10,7 @@ const ContainedButton = styled(BaseButton)`
     0px 3px 1px -2px rgba(0, 0, 0, 0.12);
   &:focus,
   :hover {
-    background-color: ${props => colors[`${props.color}ColorLighter`]};
+    background-color: blue;
     transition: 0.3s;
   }
 `;

@@ -3,7 +3,7 @@ import { colors } from "../../variables";
 import { ContainedButton } from "../Buttons";
 
 const Button = styled(ContainedButton)`
-  background-color: ${props => colors[`${props.color}Color`]};
+  background-color: blue;
   color: ${colors.white};
   width: 75px;
   padding: 0;

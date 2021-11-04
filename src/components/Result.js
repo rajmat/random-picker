@@ -3,15 +3,15 @@ import { ResultView, ContainedButton, OutlinedButton } from "../ui";
 
 function ShowResult({ result, randomPick, goBack, emptyList }) {
   return (
-    <ResultView result={result.text} color={result.color}>
+    <ResultView result={"🍺 " + result.text + " 🍺"} color={result.color}>
       <ContainedButton small color="primary" onClick={randomPick}>
-        Pick again
+        Újra
       </ContainedButton>
       <ContainedButton small color="secondary" onClick={emptyList}>
-        Make a new list
+        Új lista
       </ContainedButton>
       <OutlinedButton small color="secondary" onClick={goBack}>
-        Go back
+        Vissza
       </OutlinedButton>
     </ResultView>
   );
