@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "33d2c45503612446ec02d0d2fda94f18",
+    "revision": "5e915eca80007b93b4351b0adf623741",
     "url": "/random-picker/index.html"
   },
   {
-    "revision": "f6a03986602c0530dc40",
+    "revision": "6119a0a8ad8e354d725c",
     "url": "/random-picker/static/css/2.3f20390f.chunk.css"
   },
   {
-    "revision": "e14e64e7ddf466213862",
-    "url": "/random-picker/static/css/main.b9fe146c.chunk.css"
+    "revision": "63b7e8fc6d5a9d42b637",
+    "url": "/random-picker/static/css/main.f4826c24.chunk.css"
   },
   {
-    "revision": "f6a03986602c0530dc40",
-    "url": "/random-picker/static/js/2.8b87d521.chunk.js"
+    "revision": "6119a0a8ad8e354d725c",
+    "url": "/random-picker/static/js/2.e86ed560.chunk.js"
   },
   {
-    "revision": "e14e64e7ddf466213862",
-    "url": "/random-picker/static/js/main.09c38dff.chunk.js"
+    "revision": "63b7e8fc6d5a9d42b637",
+    "url": "/random-picker/static/js/main.7f774667.chunk.js"
   },
   {
-    "revision": "4b1d220a1bb95a271639",
-    "url": "/random-picker/static/js/runtime~main.4d8cc129.js"
+    "revision": "bc1878abb8e223c8b597",
+    "url": "/random-picker/static/js/runtime~main.1a56d543.js"
+  },
+  {
+    "revision": "a7f3eac8e84f8cc11245361fd59e5313",
+    "url": "/random-picker/static/media/BAK.a7f3eac8.png"
   },
   {
     "revision": "a8ff34126a8434358babacfa54bc40c8",

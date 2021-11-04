@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/random-picker/static/css/main.b9fe146c.chunk.css",
-    "main.js": "/random-picker/static/js/main.09c38dff.chunk.js",
-    "main.js.map": "/random-picker/static/js/main.09c38dff.chunk.js.map",
-    "runtime~main.js": "/random-picker/static/js/runtime~main.4d8cc129.js",
-    "runtime~main.js.map": "/random-picker/static/js/runtime~main.4d8cc129.js.map",
+    "main.css": "/random-picker/static/css/main.f4826c24.chunk.css",
+    "main.js": "/random-picker/static/js/main.7f774667.chunk.js",
+    "main.js.map": "/random-picker/static/js/main.7f774667.chunk.js.map",
+    "runtime~main.js": "/random-picker/static/js/runtime~main.1a56d543.js",
+    "runtime~main.js.map": "/random-picker/static/js/runtime~main.1a56d543.js.map",
     "static/css/2.3f20390f.chunk.css": "/random-picker/static/css/2.3f20390f.chunk.css",
-    "static/js/2.8b87d521.chunk.js": "/random-picker/static/js/2.8b87d521.chunk.js",
-    "static/js/2.8b87d521.chunk.js.map": "/random-picker/static/js/2.8b87d521.chunk.js.map",
+    "static/js/2.e86ed560.chunk.js": "/random-picker/static/js/2.e86ed560.chunk.js",
+    "static/js/2.e86ed560.chunk.js.map": "/random-picker/static/js/2.e86ed560.chunk.js.map",
     "index.html": "/random-picker/index.html",
-    "precache-manifest.f7c4c8d8271091f2f1a5c21effb61424.js": "/random-picker/precache-manifest.f7c4c8d8271091f2f1a5c21effb61424.js",
+    "precache-manifest.df79e91266c7248005132da248415a26.js": "/random-picker/precache-manifest.df79e91266c7248005132da248415a26.js",
     "service-worker.js": "/random-picker/service-worker.js",
     "static/css/2.3f20390f.chunk.css.map": "/random-picker/static/css/2.3f20390f.chunk.css.map",
-    "static/css/main.b9fe146c.chunk.css.map": "/random-picker/static/css/main.b9fe146c.chunk.css.map",
+    "static/css/main.f4826c24.chunk.css.map": "/random-picker/static/css/main.f4826c24.chunk.css.map",
+    "static/media/BAK.png": "/random-picker/static/media/BAK.a7f3eac8.png",
     "static/media/index.css": "/random-picker/static/media/comfortaa-latin-700.ca33a436.woff2"
   }
 }
